@@ -16,7 +16,7 @@ const Book = () => {
         // console.log(selectedServices);
 
         useEffect (() => {
-            fetch('http://localhost:5200/services')
+            fetch('https://salty-beyond-72419.herokuapp.com/services')
             .then(res =>res.json())
             .then(data => setServices(data))
         }, [])
@@ -26,7 +26,7 @@ const Book = () => {
         data.service= selectedServices.name;
         data.price = selectedServices.cost;
 
-        fetch('http://localhost:5200/addBooking', {
+        fetch('https://salty-beyond-72419.herokuapp.com/addBooking', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)

@@ -18,7 +18,7 @@ const MakeAdmin = () => {
         }
       console.log(data)
 
-    fetch('http://localhost:5200/makeAdmin', {
+    fetch('https://salty-beyond-72419.herokuapp.com/makeAdmin', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(adminData)

@@ -18,7 +18,7 @@ const Review = () => {
     }
     // console.log(data)
 
-    const url = `http://localhost:5200/addReview`;
+    const url = `https://salty-beyond-72419.herokuapp.com/addReview`;
     console.log(reviewData)
     fetch(url, {
       method: 'POST', 

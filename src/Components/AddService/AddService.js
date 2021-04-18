@@ -19,7 +19,7 @@ const AddService = () => {
     }
     console.log(data)
 
-    const url = `http://localhost:5200/addService`;
+    const url = `https://salty-beyond-72419.herokuapp.com/addService`;
     console.log(serviceData)
     fetch(url, {
       method: 'POST', 

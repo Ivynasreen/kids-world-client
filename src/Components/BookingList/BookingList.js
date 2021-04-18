@@ -6,14 +6,14 @@ const BookingList = () => {
     const [bookings , setBookings] = useState([]);
     const [loggedInUser , setLoggedInUser] = useContext(UserContext);
     useEffect(()=> {
-        fetch('http://localhost:5200/bookings')
+        fetch('https://salty-beyond-72419.herokuapp.com/bookings')
         .then(res => res.json())
         .then(data=> setBookings(data))
     }, [])
     // console.log(bookings)
 
     useEffect(() => {
-        fetch('http://localhost:5200/order', {
+        fetch('https://salty-beyond-72419.herokuapp.com/order', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({email: loggedInUser.email })
