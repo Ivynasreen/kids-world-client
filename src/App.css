@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+.text-brand {
+  color: #0c2461;
+  font-weight: bold;
+}
