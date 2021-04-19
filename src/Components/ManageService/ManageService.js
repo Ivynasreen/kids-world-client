@@ -11,7 +11,7 @@ const ManageService = () => {
         }, []) 
     
        const deleteService = (id) => {
-            console.log("clicked")
+            console.log(id)
             fetch(`https://salty-beyond-72419.herokuapp.com/deleteService/${id}`, {
                 method: 'DELETE'
             })

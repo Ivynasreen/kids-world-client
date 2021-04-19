@@ -38,7 +38,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/" className="text-white">
+                    <Link to="/" className="text-white" style={{ textDecoration: 'none' }}>
                         <FontAwesomeIcon icon={faHome} /> <span>Home</span>
                     </Link>
                 </li>
