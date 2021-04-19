@@ -16,13 +16,13 @@ const Navbar = () => {
                     <Link style = {{textDecoration: 'none'}}to = "/home"><a class="nav-link me-5 text-brand" href="#">Home</a></Link>
                 </li>
                 <li class="nav-item">
-                 <a class="nav-link me-5 text-brand" href="#">About</a>
+                 <Link to ="/about" class="nav-link me-5 text-brand"  style ={{textDecoration: 'none'}}>About</Link>
                 </li>
                 <li class="nav-item">
                     <Link style = {{textDecoration: 'none'}}to = "/dashboard" class="nav-link me-5 text-brand">Dashboard</Link>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link me-5 text-brand" href="#">Contact</a>
+                    <Link to = "/contact" class="nav-link me-5 text-brand"  style ={{textDecoration: 'none'}}>Contact</Link>
                 </li>
                 <li class="nav-item  login">
                     <Link to="/login" class="nav-link me-5 text-brand btn btn-danger text-white" style ={{textDecoration: 'none'}}>Login</Link>

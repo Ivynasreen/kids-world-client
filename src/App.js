@@ -15,6 +15,8 @@ import BookingList from './Components/BookingList/BookingList';
 import MakeAdmin from './Components/MakeAdmin/MakeAdmin';
 import Dashboard from './Components/Dashboard/Dashboard';
 import ManageService from './Components/ManageService/ManageService';
+import Contact from './Components/Contact/Contact';
+import About from './Components/About/About';
 
 
 export const UserContext = createContext();
@@ -49,6 +51,12 @@ function App() {
             <Route path="/manageService">
               <ManageService />
             </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route> 
+            <Route path="/about">
+              <About />
+            </Route> 
             <Route path="/login">
               <Login />
             </Route>

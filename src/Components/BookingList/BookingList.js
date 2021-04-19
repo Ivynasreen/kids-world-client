@@ -23,7 +23,6 @@ const BookingList = () => {
     }, [])
     
 
-
     return (
         <section className="container-fluid row"> 
             <Sidebar></Sidebar>
