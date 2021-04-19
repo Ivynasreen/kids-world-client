@@ -10,14 +10,16 @@ const ManageService = () => {
             .then(data=> setServices(data))
         }, []) 
     
-        function deleteService(id) {
-            fetch(`https://salty-beyond-72419.herokuapp.com/delete/${id}`, {
+       const deleteService = (id) => {
+            console.log("clicked")
+            fetch(`https://salty-beyond-72419.herokuapp.com/deleteService/${id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())
             .then(result => {
                 if(result) {
                     console.log('result' , result)
+                    alert('deleted')
                 }
             })
         }
@@ -50,7 +52,7 @@ const ManageService = () => {
                                     <td>{service.name}</td>
                                     <td>{service.cost}</td>
                                     <td>{service.description}</td>
-                                    <td><button onClick = {()=> deleteService()}className = "btn btn-danger">Delete</button></td>
+                                    <td><button onClick = {() =>deleteService(service._id)}className = "btn btn-danger">Delete</button></td>
                                 </tr>
                                 )    
                             }
