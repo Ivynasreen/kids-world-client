@@ -45,11 +45,9 @@ const SimpleCardForm = ({handlePayment}) => {
 
   return (
     <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(event) => handleSubmit(event)}>
             <CardElement />
-            <button type="submit" disabled={!stripe}>
-                Pay
-            </button>
+            <input type="submit" disabled= {!stripe} value = "Pay" />
         </form>
         {
             paymentError && <p style={{color: 'red'}}>{paymentError}</p>

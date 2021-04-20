@@ -40,20 +40,24 @@ const Book = () => {
             <h5 className = "text-danger">Book</h5>
             <br/>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                <div class="form-group">
+                        <input type="text" class="form-control" name = "name" placeholder ="Enter Your Name" ref = {register}/>
+                    </div>
+                    <br/>
                     <div class="form-group">
                         <input type="number" class="form-control" name = "phone" placeholder ="Enter Your Phone Number" ref = {register}/>
                     </div>
                     <br/>
                     <div class="form-group">
-                        <input type="text" class="form-control" name = "email" placeholder ="Enter Your Email" ref = {register}/>
+                        <input type="text" class="form-control" name = "email" placeholder ="Enter Your Email" ref={register}/>
                     </div>
                     <br/>
                     <div class="form-group">
-                        <input type="text" class="form-control" name = "name" value = {selectedServices?.name} ref = {register}/>
+                        <input type="text" class="form-control" name = "service" value = {selectedServices?.name} ref={register}/>
                     </div>
                     <br/>
                     <div class="form-group">
-                        <input type="text" class="form-control" name = "name" value ={selectedServices?.cost}ref = {register}/>
+                        <input type="text" class="form-control" name = "price" value ={selectedServices?.cost}ref={register}/>
                     </div>
                     <br/>
                     <small>Pay With</small>
@@ -67,13 +71,11 @@ const Book = () => {
                         <label class="form-check-label" for="inlineRadio2"><FontAwesomeIcon style = {{color: '#192a56'}}  icon={faPaypal} /> Paypal</label>
                     </div>
                     <br/>
-                    <button type="submit" className = "btn btn-danger mt-4">
-                        Submit
-                    </button>
+                    <input type="submit" className = "btn btn-danger mt-4" /> 
+                </form>
                     <div className = "mt-5">
                         <PaymentProcess />
                     </div>
-                </form>
             </div>
         </section>
         
