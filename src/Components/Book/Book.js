@@ -38,21 +38,22 @@ const Book = () => {
             <Sidebar></Sidebar>
             <div style={{ position: "absolute", right: 0}}className = "col-md-10 p-5 ms-5">
             <h5 className = "text-danger">Book</h5>
-            <h3>{selectedServices?.name}</h3>
-            <h6>{selectedServices?.cost}</h6>
             <br/>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <br></br>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name = "name" placeholder ="Enter Your Name" ref = {register}/>
-                    </div>
-                    <br/>
                     <div class="form-group">
                         <input type="number" class="form-control" name = "phone" placeholder ="Enter Your Phone Number" ref = {register}/>
                     </div>
                     <br/>
                     <div class="form-group">
                         <input type="text" class="form-control" name = "email" placeholder ="Enter Your Email" ref = {register}/>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name = "name" value = {selectedServices?.name} ref = {register}/>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name = "name" value ={selectedServices?.cost}ref = {register}/>
                     </div>
                     <br/>
                     <small>Pay With</small>

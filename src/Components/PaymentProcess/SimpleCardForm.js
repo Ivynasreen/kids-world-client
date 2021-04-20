@@ -36,7 +36,7 @@ const SimpleCardForm = ({handlePayment}) => {
       setPaymentError(error.message);
       setPaymentSuccess(null);
     } else {
-      console.log(paymentMethod.id)
+        console.log(paymentMethod.id)
         setPaymentSuccess(paymentMethod.id);
         setPaymentError(null);
         handlePayment(paymentMethod.id)

@@ -26,7 +26,7 @@ const Login = () => {
       storeAuthToken();
     }).catch(function (error) {
       const errorMessage = error.message;
-      console.log(errorMessage);
+      // console.log(errorMessage);
     });
   }
 
