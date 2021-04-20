@@ -40,7 +40,7 @@ const Book = () => {
             <h5 className = "text-danger">Book</h5>
             <br/>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                <div class="form-group">
+                    <div class="form-group">
                         <input type="text" class="form-control" name = "name" placeholder ="Enter Your Name" ref = {register}/>
                     </div>
                     <br/>
