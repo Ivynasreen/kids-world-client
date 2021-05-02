@@ -22,6 +22,20 @@ const BookingList = () => {
             .then(data => setBookings(data))
     }, [])
     
+    const changeStatus=(e , id)=> {
+        console.log(id)
+        fetch(`https://salty-beyond-72419.herokuapp.com/update/${id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(e.target.value)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result) {
+                    alert("updated")
+                }
+            })
+    }
 
     return (
         <section className="container-fluid row"> 
@@ -53,7 +67,7 @@ const BookingList = () => {
                                 <td>{booking.service}</td>
                                 <td>Credit Card</td>
                                 <td> 
-                                    <select>
+                                    <select onClick = {(e) =>changeStatus(e, booking._id)}>
                                         <option disabled={true}>Select</option>
                                         <option>Pending</option>
                                         <option>Ongoing</option>
